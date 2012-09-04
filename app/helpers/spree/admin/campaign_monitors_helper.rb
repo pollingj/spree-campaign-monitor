@@ -1,4 +1,4 @@
-module Admin::CampaignMonitorsHelper
+module Spree::Admin::CampaignMonitorsHelper
 
   #
   # True when campaign monitor is defined

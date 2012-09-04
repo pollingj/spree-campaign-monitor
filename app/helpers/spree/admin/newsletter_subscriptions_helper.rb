@@ -1,4 +1,4 @@
-module Admin::NewsletterSubscriptionsHelper
+module Spree::Admin::NewsletterSubscriptionsHelper
 
   #
   # Creates link how toggles the active state

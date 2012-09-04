@@ -1,6 +1,6 @@
 class CreateCampaignMonitors < ActiveRecord::Migration
   def self.up
-    create_table :campaign_monitors do |t|
+    create_table :spree_campaign_monitors do |t|
       t.string      :name
       t.string      :api_key
       t.string      :client_key
@@ -9,6 +9,6 @@ class CreateCampaignMonitors < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :campaign_monitors
+    drop_table :spree_campaign_monitors
   end
 end
