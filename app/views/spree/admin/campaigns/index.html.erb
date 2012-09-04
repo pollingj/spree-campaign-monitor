@@ -1,0 +1,25 @@
+<%= render 'spree/admin/shared/side_menu' %>
+
+<h1><%= t('campaigns') %></h1>
+
+<table class="index">
+	<thead>
+		<tr>
+			<th><%= t('campaign.name') %></th>
+			<th><%= t('campaign.subject') %></th>
+			<th><%= t('campaign.total_recipients') %></th>
+			<th><%= t('campaign.sent_date') %></th>
+			<th><%= t('campaign.send_campaign') %></th>
+	</thead>
+	<tbody>
+    	<% @campaigns.each do |campaign| %>
+			<tr id="#{dom_id campaign}">
+				<td><%= campaign.name %></td>
+				<td><%= campaign.subject %></td>
+				<td><%= campaign.total_recipients %></td>
+				<td><%= campaign.sent_date %></td>
+				<td><%= link_to_remote t('campaign.sending_campaign', :name => campaign.name ), :url => { :action => 'invoke', :id => campaign.id }, :complete => '$(this).parent.insert("done");$(this).parent.show();' %></td>
+			</tr>
+     	<% end -%>
+	</tbody>
+</table>
